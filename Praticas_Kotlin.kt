@@ -1,21 +1,3 @@
-    fun main () {
-      //  forever()
-        var sum = 1
-        do {
-            println(sum)
-            sum += 1
-        } while (sum < 100)
-    }
-
-    fun forever() : Nothing {
-        while (true) {
-            Thread.sleep(1000)
-            println("oi")
-        }
-    }
-    
-    ///////
-    
 import kotlin.math.*
 
 4 % 2
@@ -127,6 +109,20 @@ if (a > 5) {
     println("maior")
 } else {
     println("menor")
+}
+
+val range = 0..5
+println(range)
+
+val descre = 5 downTo 0
+val tiraUlt = 0 until 5
+
+for (x in range) {
+    println(x)
+}
+
+range.forEach {
+    println(it)
 }
 
 
