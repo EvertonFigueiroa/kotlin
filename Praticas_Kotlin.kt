@@ -125,5 +125,57 @@ range.forEach {
     println(it)
 }
 
+val user = "Samsung"
+when(user) {
+    "Samsung", "Motorola" -> println("Android")
+    else -> println("iOS")
+}
 
+val number = 3
+val numberText = when(number) {
+    0 -> "zero"
+    1 -> "um"
+    2 -> "dois"
+    else -> {
+        println("desconhecido")
+        "desconhecido"
+    }
+}
+
+println(numberText)
+
+val hour = 13
+val time = when(hour) {
+    in 6..11 -> "Manhã"
+    in 12..17 -> "Tarde"
+    in 18..24 -> "Noite"
+    else -> "Não definido"
+}
+
+println(time)
+
+fun soma(x: Int, y: Int) {
+    println(x + y)
+}
+
+soma(5, 6)
+
+fun discount(x: Int, percent: Int = 10) {
+    println(x - (x * percent / 100))
+}
+
+discount(100)
+
+fun multi(x: Int, y: Int) : Int {
+    return x * y
+}
+
+//fun multx (x: Int, y: Int) : Pair<Int, Int> {
+//    return Pair(x * y, x / y)
+//}
+//println(multx(5, 2))
+
+fun multx (x: Int, y: Int) = Pair(x * y, x / y)
+
+println(multx(5,2))
 
